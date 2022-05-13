@@ -1,0 +1,51 @@
+/*General formatting*/
+:root {
+    font-size: 4vmin;
+    font-family: sans-serif;
+    height: 100%;
+  }
+  
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+  
+  .container .word {
+    display: flex;
+  }
+  
+  .container .word .letter {
+    width: 2em;
+    height: 2em;
+    margin: 0.05em;
+    background-color: rgb(158, 154, 154);
+    color: white;
+    text-align: center;
+    user-select: none;
+    position: relative;
+    order: 2;
+    right: 50%;
+  }
+  
+  .container .word .letter:before {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+  }
+  
+  .container .word .letter:last-child {
+    margin-right: auto;
+  }
+  
+  .container .word .pivot {
+    background-color: #03f759;
+  }
+  
+  .container .word .pivot,
+  .container .word .pivot ~ .letter {
+    order: 1;
+    left: 50%;
+  }

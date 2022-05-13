@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technical Documentation Page</title>
+    <link rel="stylesheet" href="css/technicaldocument.css">
+</head>
+<body>
+    <nav id="navbar">
+        <header>CSS Layout</header>
+        <ul>
+          <li><a class="nav-link" href="#CSS_Layout_Overview">CSS Layout Overview</a></li>
+          <li>
+            <a class="nav-link" href="#Introduction_to_CSS_Layout"
+              >Introduction to CSS Layout</a>
+          </li>
+          <li>
+            <a class="nav-link" href="#Normal_flow">Normal flow</a>
+          </li>
+          <li><a class="nav-link" href="#Flexbox">Flexbox</a></li>
+          <li><a class="nav-link" href="#Grids">Grids</a></li>
+          <li>
+            <a class="nav-link" href="#Floats">Floats</a>
+          </li>
+          <li><a class="nav-link" href="#Positioning">Positioning</a></li>
+          <li><a class="nav-link" href="#Multiple_column_Layout">Multiple Column Layout</a></li>
+          <li><a class="nav-link" href="#Responsive_design">Responsive design</a></li>
+          <li><a class="nav-link" href="#while_statement">While statement</a></li>
+          <li>
+            <a class="nav-link" href="#Legacy_Layout_Methods">Legacy Layout Methods</a>
+          </li>
+          <li><a class="nav-link" href="#Supporting_Older_Browsers">Supporting Older Browsers</a></li>
+          <li>
+            <a class="nav-link" href="#Fundamental_Layout_Comprehension">Fundamental Layout Comprehension</a>
+          </li>
+      <!--     <li><a class="nav-link" href="#Reference">Reference</a></li> -->
+        </ul>
+      </nav>
+      <main id="main-doc">
+        <section class="main-section" id="CSS_Layout_Overview">
+          <header>CSS Layout overview</header>
+          <article>
+            <p>
+              At this point, we've looked at CSS fundamentals, how to style text, and how to style and manipulate the boxes that your content sits inside.<br> Now it's time to look at how to correctly arrange your boxes in relation to the viewport as well as to one another. We've covered the necessary <br> prerequisites, so let's dive deep into CSS layout, looking at such various features as: different display settings, positioning, modern layout tools <br> like flexbox and CSS grid, and some of the legacy techniques you might still want to know about.
+            </p>
+            <p>
+              Before starting this module, you should already:
+            </p>
+            <ul>
+              <li>
+                Have basic familiarity with HTML, as discussed in the <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML"> Introduction to HTML</a> module. 
+              </li>
+              <li>
+                Be comfortable with CSS fundamentals, as discussed in <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps">Introduction to CSS.</a>
+              </li>
+               <li>
+                 Understand how to<a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks"> Style boxes</a>.
+              </li>
+            </ul>
+          </article>
+        </section>
+        <section class="main-section" id="Introduction_to_CSS_Layout">
+          <header>Introduction to CSS Layout</header>
+          <article>
+            <p>This guide assumes you have the following basic background:</p>
+            <ul>
+              <li>
+                This article will recap some of the CSS layout features we've already touched upon in previous modules,<br> such as different display values, as well as introduce some of the concepts we'll be covering throughout this module.
+              </li>
+              <li>Good working knowledge of HyperText Markup Language (HTML).</li>
+              <li>
+                Some programming experience. If you are new to programming, try one of the tu CSS and HTML linked on the main <br> page about CSS.
+              </li>
+            </ul>
+          </article>
+        </section>
+        <section class="main-section" id="Normal_flow">
+          <header>Normal Flow</header>
+          <article>
+            <p>
+              Normal flow is how the browser lays out HTML pages by default when you do nothing to control page layout.
+            </p>
+            <p>
+             Note how the HTML is displayed in the exact order in which it appears in the source code, with elements stacked <br> on top of one another — the first paragraph, followed by the unordered list, followed by the second paragraph.
+            </p>
+            <p>
+              The elements that appear one below the other are described as block elements, in contrast to inline elements,<br> which appear beside one another like the individual words in a paragraph.
+            </p>
+          </article>
+        </section>
+        <section class="main-section" id="Flexbox">
+          <header>Flexbox</header>
+          <article>
+            Flexbox is the short name for the Flexible Box Layout CSS module, designed to make it easy for us to lay things <br> out in one dimension — either as a row or as a column. To use flexbox, you apply display: flex to the parent element <br> of the elements you want to lay out; all its direct children then become flex items. We can see this in a simple example.<br>
+            <code>
+              .main-section {
+        display: flex;
+      }
+            </code>
+          </article>
+        </section>
+        <section class="main-section" id="Grids">
+          <header>Grids</header>
+          <p>
+            While flexbox is designed for one-dimensional layout, Grid Layout is designed for two dimensions — lining things up in rows and columns.
+          </p>
+          <p>
+            Similar to flexbox, we enable Grid Layout with its specific display value — display: grid. The below example uses similar markup to the flex  <br> example, with a container and some child elements. In addition to using display: grid, we also define some row and column tracks for the <br> parent using the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-rows"> grid-template-rows</a> and <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-columns">grid-template-columns</a> properties respectively.
+          </p>
+          <p>
+            We've defined three columns, each of 1fr, as well as two rows of 100px. We dont need to put any rules on the child elements; they're <br> automatically placed into the cells our grid's created.
+          </p>
+        </section>
+        <section class="main-section" id="Floats">
+          <header>Floats</header>
+          <article>
+            Floating an element changes the behavior of that element and the block level elements that follow it in normal flow.<br> The floated element is moved to the left or right and removed from normal flow, and the surrounding content floats around it.
+            <p>
+              The <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/float">float</a> property has four possible values:
+            </p>
+            <p>
+              Positioning allows you to move an element from where it would otherwise be placed in normal flow over to another location.<br> Positioning isnt a method for creating the main layouts of a page; it's more about managing and fine-tuning the position of specific items on a page.
+            </p>
+            <p>
+              <code>
+                .main-section {
+          float: left;
+          width: 150px;
+          height: 150px;
+          margin-right: 30px;
+      }
+              </code>
+            </p>
+          </article>
+        </section>
+        <section class="main-section" id="Positioning">
+          <header>Positioning</header>
+          <article>
+            <p>
+              Positioning allows you to move an element from where it would otherwise be placed in normal flow over to another location.<br> Positioning isnt a method for creating the main layouts of a page; it more about managing and fine-tuning the position of <br> specific items on a page.
+            </p>
+            <p>
+              To provide familiarity with these page layout techniques, we'll show you a couple of quick examples. Our examples will all <br> feature the same HTML structure (a heading followed by three paragraphs), which is as follows:
+            </p>
+            <code>
+              body {
+        width: 500px;
+        margin: 0 auto;
+      }
+            </code>
+            <p>
+              This HTML will be styled by default using the following CSS:
+            </p>
+            <code>
+              p {
+          background-color: rgb(207,232,220);
+          border: 2px solid rgb(79,185,227);
+          padding: 10px;
+          margin: 10px;
+          border-radius: 5px;
+      }
+            </code>
+          </article>
+        </section>
+        <section class="main-section" id="Multiple_column_Layout"><header>Multiple Column Layout</header>
+          <article>
+            <p>
+              The multi-column layout CSS module provides us a way to lay out content in columns, similar to how text flows in a newspaper.<br> While reading up and down columns is less useful in a web context due to the users <br> having to scroll up and down, arranging content into columns can, nevertheless, be a useful technique.
+            </p>
+            <code>
+              .main-section {
+              column-width: 200px;
+              }
+            </code>
+          </article>
+        </section>
+        <section class="main-section" id="Responsive_design">
+          <header>Responsive Design</header>
+          <article>
+            <p>
+              In the early days of web design, pages were built to target a particular screen size. If the user had a larger or smaller screen <br> than the designer expected, results ranged from unwanted scrollbars to overly long line lengths, and poor use of space.  
+            </p>
+            <p>
+               It is an idea that changed the way we design for a multi-device web, and in this article, we'll help you understand the <br> main techniques you need to know to master it.
+            </p>
+            <p>
+              As more diverse screen sizes became available, the concept of responsive web design (RWD) appeared, a set of <br> practices that allows web pages to alter their layout and appearance to suit different screen widths, resolutions, etc.
+            </p>
+            <code>
+              .main-section {
+        column-count: 3;
+      }
+          </article>
+        </section>
+       <section class="main-section" id="while_statement">
+          <header>while statement</header>
+          <article>
+            A while statement executes its statements as long as a specified condition
+            evaluates to true. A while statement looks as follows:
+      
+            <code>while (condition) statement</code> If the condition becomes false,
+            statement within the loop stops executing and control passes to the
+            statement following the loop.
+      
+            <p>
+              The condition test occurs before statement in the loop is executed. If
+              the condition returns true, statement is executed and the condition is
+              tested again. If the condition returns false, execution stops and
+              control is passed to the statement following while.
+            </p>
+      
+            <p>
+              To execute multiple statements, use a block statement ({ ... }) to group
+              those statements.
+            </p>
+      
+            Example:
+      
+            <p>The following while loop iterates as long as n is less than three:</p>
+      
+            <code>var n = 0; var x = 0; while (n &lt; 3) { n++; x += n; }</code>
+            <p>
+              With each iteration, the loop increments n and adds that value to x.
+              Therefore, x and n take on the following values:
+            </p>
+      
+            <ul>
+              <li>After the first pass: n = 1 and x = 1</li>
+              <li>After the second pass: n = 2 and x = 3</li>
+              <li>After the third pass: n = 3 and x = 6</li>
+            </ul>
+            <p>
+              After completing the third pass, the condition n &lt; 3 is no longer
+              true, so the loop terminates.
+            </p>
+          </article>
+        </section>
+          <section class="main-section" id="Legacy_Layout_Methods">
+          <header>Legacy Layout Methods</header>
+          <article>
+            A while statement executes its statements as long as a specified condition
+            evaluates to true. A while statement looks as follows:
+      
+            <code>while (condition) statement</code> If the condition becomes false,
+            statement within the loop stops executing and control passes to the
+            statement following the loop.
+      
+            <p>
+              The condition test occurs before statement in the loop is executed. If
+              the condition returns true, statement is executed and the condition is
+              tested again. If the condition returns false, execution stops and
+              control is passed to the statement following while.
+            </p>
+      
+            <p>
+              To execute multiple statements, use a block statement ({ ... }) to group
+              those statements.
+            </p>
+      
+            Example:
+      
+            <p>The following while loop iterates as long as n is less than three:</p>
+      
+            <code>var n = 0; var x = 0; while (n &lt; 3) { n++; x += n; }</code>
+            <p>
+              With each iteration, the loop increments n and adds that value to x.
+              Therefore, x and n take on the following values:
+            </p>
+      
+            <ul>
+              <li>After the first pass: n = 1 and x = 1</li>
+              <li>After the second pass: n = 2 and x = 3</li>
+              <li>After the third pass: n = 3 and x = 6</li>
+            </ul>
+            <p>
+              After completing the third pass, the condition n &lt; 3 is no longer
+              true, so the loop terminates.
+            </p>
+          </article>
+        </section>
+        <section class="main-section" id="Supporting_Older_Browsers">
+          <header>Supporting Older Browsers</header>
+          <article>
+           Save the HTML document and stylesheet into a directory on your computer, and add the images into a folder named images.<br> Opening the index.html file in a browser should give you a page with basic styling but no layout, which should look something like the image seen below.
+          </article>
+        </section>
+        <section class="main-section" id="Fundamental_Layout_Comprehension">
+          <header>Fundamental Layout Comprehension</header>
+          <article>
+            A function definition (also called a function declaration, or function
+            statement) consists of the function keyword, followed by:
+      
+            <ul>
+              <li>The name of the function.</li>
+              <li>
+                A list of arguments to the function, enclosed in parentheses and
+                separated by commas.
+              </li>
+              <li>
+                The JavaScript statements that define the function, enclosed in curly
+                brackets, { }.
+              </li>
+            </ul>
+            <p>
+              For example, the following code defines a simple function named square:
+            </p>
+            <p>
+              The function square takes one argument, called number. The function
+              consists of one statement that says to return the argument of the
+              function (that is, number) multiplied by itself. The return statement
+              specifies the value returned by the function.
+            </p>
+            <p>
+              Primitive parameters (such as a number) are passed to functions by
+              value; the value is passed to the function, but if the function changes
+              the value of the parameter, this change is not reflected globally or in
+              the calling function.
+            </p>
+          </article>
+        </section>
+       </main>
+</body>
+</html>

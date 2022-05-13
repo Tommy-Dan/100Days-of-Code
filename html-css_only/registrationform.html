@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration form</title>
+    <link rel="stylesheet" href="css/registrationform.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+          <h1 id="title" class="text-center">Codetrain Student Registration Form</h1>
+          <p id="description" class="description text-center">
+            Fill out the form carefully for registration
+          </p>
+        </header>
+        <form id="registratio-form">
+          <div class="form-group">
+            <label id="fname-label" for="fname">First name</label>
+            <input
+              type="text"
+              name="fname"
+              id="fname"
+              class="form-control"
+              placeholder="Enter your first name"
+              required
+            />
+
+            <div class="form-group">
+                <label id="lname-label" for="lname">Last name</label>
+                <input
+                  type="text"
+                  name="lname"
+                  id="lname"
+                  class="form-control"
+                  placeholder="Enter your last name"
+                  required
+                />
+          </div>
+
+          <div class="form-group">
+            <label id="email-label" for="email">Email</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              class="form-control"
+              placeholder="Enter your Email Address"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label id="number-label" for="number">Age<span class="clue">(optional)</span></label>
+            <input
+              type="number"
+              name="age"
+              id="number"
+              min="10"
+              max="100"
+              class="form-control"
+              placeholder="Your age"
+            />
+
+            <div class="form-group">
+                <label id="phone#-label" for="number">Phone</label>
+                <input
+                  type="number"
+                  name="phone#"
+                  id="phone#"
+                  class="form-control"
+                  placeholder="+233-xx-xx-xx-xxx"
+                />
+
+          </div>
+
+          <div class="form-group">
+            <p>Your gender:</p>
+            <label>
+              <input
+                name="gender"
+                value="male"
+                type="radio"
+                class="input-radio"
+                checked
+              />Male</label
+            >
+            <label>
+              <input
+                name="gender"
+                value="female"
+                type="radio"
+                class="input-radio"
+              />Female</label
+            >
+      
+            <label
+              ><input
+                name="gender"
+                value="other"
+                type="radio"
+                class="input-radio"
+              />Other</label
+            >
+          </div>
+      
+          <div class="form-group">
+            <p>
+              Select your choice of program:
+            </p>
+            <select id="program-choice" name="program-choice" class="form-control" required>
+              <option disabled selected value>Select an option</option>
+              <option value="mobile-dev">Mobile Development</option>
+              <option value="web-dev">Web Development</option>
+              <option value="desktop-dev">Desktop Application Development</option>
+              <option value="data-science">Data Science</option>
+            </select>
+          </div>
+      
+          <div class="form-group">
+            <p>
+              Pick days for your classes
+              <span class="clue">(Check all that apply)</span>
+            </p>
+      
+            <label
+              ><input
+                name="days"
+                value="monday"
+                type="checkbox"
+                class="input-checkbox"
+              />Monday</label
+            >
+            <label>
+              <input
+                name="days"
+                value="Tuesday"
+                type="checkbox"
+                class="input-checkbox"
+              />Tuesday</label
+            >
+            <label
+              ><input
+                name="days"
+                value="wednesday"
+                type="checkbox"
+                class="input-checkbox"
+              />Wednesday</label
+            >
+            <label
+              ><input
+                name="days"
+                value="thursday"
+                type="checkbox"
+                class="input-checkbox"
+              />Thursday</label
+            >
+            <label
+              ><input
+                name="days"
+                value="friday"
+                type="checkbox"
+                class="input-checkbox"
+              />Friday</label
+            >
+            <label
+              ><input
+                name="days"
+                value="saturday"
+                type="checkbox"
+                class="input-checkbox"
+              />Saturday</label
+            >
+            <label
+              ><input
+                name="days"
+                value="sunday"
+                type="checkbox"
+                class="input-checkbox"
+              />Sunday</label
+            >
+          </div>
+      
+          <div class="form-group">
+            <p>Any comments or additional information?</p>
+            <textarea
+              id="comments"
+              class="input-textarea"
+              name="comment"
+              placeholder="Enter your any comments here..."
+            ></textarea>
+          </div>
+      
+          <div class="form-group">
+            <button type="submit" id="submit" class="submit-button">
+              Submit
+            </button>
+          </div>
+        </form>
+      </div>
+      
+    
+</body>
+</html>

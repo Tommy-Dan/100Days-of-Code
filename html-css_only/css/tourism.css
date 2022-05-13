@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Prata&display=swap");
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("/home/tom/Desktop/git_dev-env/100-days-of-code/html-css/images/bg.png");
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    font-family: "Prata", sans-serif;
+    margin: 0;
+    min-height: 100vh;
+}
+aside {
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 32px;
+    width: 300px;
+    height: 100vh;
+}
+.special {
+    background-color: #feab51;
+    color: #000;
+    display: block;
+    padding: 8px;
+    text-align: center;
+}
+aside ul{
+    list-style-type: none;
+    padding: 0;
+}
+aside a{
+    text-decoration: none;
+    display: inline-block;
+    color: #fff;
+    font-size: 32px;
+    margin: 8px;
+}
+main {
+    color: #fff;
+    font-size: 32px;
+    padding: 28px;
+}
+main h1 {
+    margin: 0;
+}
+main h3 {
+    color: #feab51;
+    margin: 0;
+}
+.logo {
+    margin-top: 14px;
+    margin-bottom: 24px;
+    color: #fff;
+}
+@media screen and (max-width: 768px) {
+    body {
+        flex-direction: column-reverse;
+        justify-content: space-between;
+    }
+
+    main {
+        min-height: 60vh;
+    }
+
+    aside {
+        height: auto;
+        width: 100%;
+    }
+
+    aside ul {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .special {
+        display: none;
+    }
+}

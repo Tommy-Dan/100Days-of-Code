@@ -1,0 +1,64 @@
+/* basic styles used through all forms of layout */
+/* Paul Irish's border-box declaration */
+html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: content-box
+  }
+  
+  body {
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #025373;
+      color: white;
+      margin: 0;
+      padding: 0;
+  }
+  header,
+  footer,
+  aside, 
+  section, 
+  article {
+      padding: 2px;
+      border-radius: 1rem;
+  }
+  footer {
+      text-align: center;
+  }
+  /* image hack to make images "responsive". Yes, not the best or the right way to do things, but it's quick! */
+  img {
+      width: 100%;
+      max-width: 100%;
+      object-fit: cover;
+      border-radius: 1em;
+  }
+
+/* Flexbox responsive and formats */
+.wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px;
+}
+.row{
+    display: flex;
+}
+.col-1-4{
+    width: 25%;
+    height: auto;
+    margin: 2px;
+}
+.col-1-2{
+    width: 50%;
+    height: auto;
+    margin: 2px;
+}
+.col-2-1{
+    width: 45%;
+    height: auto;
+    margin: 2px;
+}
+.col-1-1{
+    width: 100%;
+    height: auto;
+    margin: 2px;
+}
