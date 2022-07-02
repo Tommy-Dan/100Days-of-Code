@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="fontawesome/all.css"> -->
+    <!-- <link rel="stylesheet" href="fontawesome/fontawesome.css"> -->
+    <link rel="stylesheet" href="css/snake-biteGame.css">
+    <title>Snake Bite | Game</title>
+</head>
+<body>
+    <div class="main-container">
+        <div class="result-container">
+            <div class="name">
+                <h2>Snake Bite Game</h2>
+            </div>
+            <div class="score">Score: <span id="score__text">0</span></div>
+            <div class="speed">Speed: <span id="speed__text">0</span>x </div>
+        </div>
+        <div class="game-container"></div>
+        
+    
+        <div class="controls-container">
+            <div class="start">
+                <div id="startGame">Start</div>
+            </div>
+            <div class="controls">
+                <div class="up" id="up"></div>
+                <div class="horizontal" id="horizontal"></div>
+                <div class="down" id="down"></div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-div">
+        <div class="modal-container">
+            <p><span id="modal--over__text">Game Over!!!</span> Score: <span id="modal__score">0</span></p>
+        </div>
+    </div>
+
+<script src="js/snake-biteGame.js"></script>
+</body>
+</html>
