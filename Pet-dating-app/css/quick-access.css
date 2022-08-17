@@ -1,0 +1,181 @@
+body {
+    margin: 0px;
+    font-family: lato 'Quicksand';
+    overflow-x:hidden;
+}
+.remember[type="checkbox"],
+.m_remember[type="checkbox"] {
+  display: none;
+}
+.remember[type="checkbox"] + label::before,
+.m_remember[type="checkbox"] + label::before {
+  content: "\a0";
+  position: relative;
+  display: inline-block;
+  vertical-align: .2em;
+  width: 18px;
+  height: 18px;
+  top: 2px;
+  background: rgb(243, 245, 248);
+  border: 1px solid #888888;
+  margin-right: .3em;
+  text-align: center;
+  line-height: 15px;
+}
+.keep_login_wrap {
+    width: 50%;
+    float: left;
+    color: #fff;
+}
+@media screen and (max-width: 800px) {
+    header.desktop {
+      display: none;
+    }
+    .flexslider.desktop {
+      display: none;
+    }
+    .my-control-nav.desktop {
+      display: none;
+    }
+    footer.desktop {
+      display: none;
+    }
+}
+@media screen and (min-width: 801px) {
+    header.desktop {
+      display: table;
+    }
+    .container {
+      width: 1300px;
+      height: 15vh;
+      margin: 0 auto;
+    }
+    .container .logo_container {
+      float: left;
+      margin: 0;
+      font-size: 20px;
+      color: #fff;
+      height: 89px;
+    }
+    .container .logo_container:before {
+      content: '';
+      display: inline-block;
+      height: 100%;
+      vertical-align: middle;
+    }
+    .container .logo_container a {
+      display: inline-block;
+      vertical-align: middle;
+    }
+    .flexslider {
+      border: none;
+      margin: 0px;
+    }
+    .flexslider::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: rgba(10,10,10,0);
+      z-index: 1;
+    }
+    .flexslider .flex-direction-nav {
+      display: none;
+    }
+    
+    header.desktop {
+      display: table;
+      font-family: lato 'Quicksand';
+      font-size: 15px;
+      background: url(https://media.istockphoto.com/photos/home-office-picture-id1290368850?b=1&k=20&m=1290368850&s=170667a&w=0&h=JIUN12GfCjOvwXO1fWgmAb9kW6Ea48FcJgK_CzZ0RA4=);
+      width: 100%;
+      background-size: cover;
+      background-position: center;
+    }
+    header.desktop .login_form,
+    header.desktop .login_form_wrap {
+      float: right;
+      margin-top: 5px;
+    }
+    header.desktop .login_form td {
+      height: 12px;
+    }
+    header.desktop .login_form_wrap .form_box {
+      width: 486px;
+      height: 39px;
+      display: block;
+    }
+    header.desktop .login_form_wrap .col-4 {
+      width: 192px;
+    }
+    header.desktop .login_form_wrap div {
+      border-spacing: 8px;
+      display: table-cell;
+      vertical-align: inherit;
+    }
+    header.desktop .login_form .field,
+    header.desktop .login_form_wrap input[name=handle],
+    header.desktop .login_form_wrap input[name=password] {
+      color: #999999;
+      border: 1px solid #888888;
+      width: 180px;
+      height: 26px;
+      padding: 8px 7px;
+      background: #fff;
+    }
+    header.desktop .login_form .remember {
+      color: #ccc;
+    }
+    header.desktop .login_form_wrap .remember {
+      color: #ccc;
+      line-height: 28px;
+    }
+    header.desktop .login_form .forgot_password,
+    header.desktop .login_form_wrap .forgot-password {
+      color: #3c8eda;
+    }
+    header.desktop .login_form button,
+    header.desktop .login_form_wrap button {
+      cursor: pointer;
+      width: 70px;
+      height: 30px;
+      background: #2884da;
+      border-radius: 5px;
+      border-bottom: 2px solid #ccc;
+      color: #fff;
+    }
+    header.desktop nav {
+      float: left;
+      width: 100%;
+      height: 24px;
+      background: #f8f8f8;
+      border: none;
+      border-bottom: 3px solid #e7e7e7;
+    }
+    header.desktop nav .bg_m {
+      line-height: 24px;
+    }
+    header.desktop nav a {
+      margin-right: 50px;
+      font-size: 12px;
+      color: #808080;
+      text-decoration: none;
+    }
+    header.desktop nav a:hover,
+    header.desktop nav a:active {
+      color: #171717;
+    }   
+}
+.img-logo {
+        vertical-align: middle;
+        height: 15vh;
+        margin-right: 65px;
+}
+.pet-img {
+    width: 100%;
+    display: block;
+}
+
+
+  
+  

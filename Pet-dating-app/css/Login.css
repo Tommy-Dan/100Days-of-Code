@@ -1,0 +1,103 @@
+/* General Styling format access accrose all */
+
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    background: url(/home/tom/Desktop/git_dev-env/Web-Dev/Pet-dating-app/images/pet-dating-background.jpg);
+    background-size: cover;
+}
+
+.container {
+    width: 450px;
+    max-width: 450px;
+    margin: 18px;
+    padding: 36px;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    background: #fff;
+}
+
+.container,
+.form-input,
+.form-btn {
+    font: 500 1rem lato 'Quicksand';
+}
+.form-title {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.img-container {
+    text-align: center;
+    margin: 15px 0 12px 0;
+}
+
+.dating-pet {
+    width: 45%;
+    border-radius: 50%;
+}
+
+.form > *:first-child {
+    margin-top: 0;
+}
+
+.form > *:last-child {
+    margin-bottom: 0;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-input {
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    outline: none;
+    background: #eee;
+    transition: background 0.2s, border-color 0.2s;
+}
+
+.form-input:focus {
+    border-color: rgb(79, 148, 79);
+    background: #fff;
+}
+
+.form-btn {
+    width: 30%;
+    margin-bottom: 25px;
+    padding: 1rem 2rem;
+    font-weight: bold;
+    font-size: 15px;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    outline: none;
+    cursor: pointer;  
+    background: darkgreen;
+}
+
+.form-btn:hover {
+    background: rgb(59, 127, 129);
+}
+
+.form-btn:active {
+    transform: scale(0.98);
+}
+
+.form-text {
+    text-align: center;
+}
+
+.form-link {
+    text-decoration: none;
+    cursor: pointer;
+}
+
